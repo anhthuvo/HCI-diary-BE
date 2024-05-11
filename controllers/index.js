@@ -3,7 +3,7 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 const openai = new OpenAI({
-    apiKey: "",
+    apiKey: process.env.OPENAI_API_KEY,
 });
 
 const chatting = async (req, res, next) => {
